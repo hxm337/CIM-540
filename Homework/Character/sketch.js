@@ -4,7 +4,7 @@ var bodyColor = "yellow";
 var beakY = 180;
 var pupilX = 98;
 var legHeight = 80;
-
+var backgroundColor = "skyblue";
 
 
 function setup() {
@@ -15,6 +15,7 @@ function setup() {
 
 function draw() {
   // put drawing code here
+
 
   //body
   fill("yellow");
@@ -30,10 +31,9 @@ function draw() {
   fill(255);
 
   //beak
-  fill("orange");
+  fill (beakColor);
   triangle(15,180,90,170,90,195);
   line(15,beakY,90,180);
-
 
   //eyes
   fill(255);
@@ -57,13 +57,10 @@ function draw() {
 
   strokeWeight(1);
 
-
-
   //legs
   fill(bodyColor);
   rect(220,360,20,legHeight);
   rect(260,370,20,legHeight);
-
 
   //feet
   fill(beakColor);
@@ -81,7 +78,15 @@ function draw() {
   triangle(360,250,410,240,385,280);
 
 
+}
+
+function mousePressed(){
+  beakColor = "purple";
+  pupilX = 102;
 
 
+}
 
+function mouseReleased(){
+  pupilX = 98;
 }
