@@ -5,6 +5,17 @@ var snowLocationX = [];
 var snowLocationY = [];
 var snowAmount = 100;
 
+var leaf;
+
+var leafLocationX = [];
+var leafLocationY = [];
+var leafAmount = 25;
+
+
+function preload() {
+  leaf = loadImage("https://openclipart.org/image/300px/svg_to_png/257622/1470680735.png");
+}
+
 
 function setup() {
   // put setup code here
@@ -25,7 +36,14 @@ function setup() {
     snowLocationX[i] = random(0,width);
     snowLocationY[i] = random(0,-500);
   }
+
+  for(var l = 0; l < leafAmount; l++){
+    leafLocationX[l] = random(0, width);
+    leafLocationY[l] = random(0, -500);
+
+  }
 }
+
 
 function draw() {
   // put drawing code here
@@ -35,7 +53,7 @@ function draw() {
   textSize(20);
   text(seasonType, 10, 75);
 
-  seasonType = "winter";
+
 
   if(seasonType == "spring"){
     line(width/2,height/2,width/2,300);
@@ -44,6 +62,7 @@ function draw() {
     // i++ is the same as i = i+1
     for(var i = 0; i < 6; i++){
       //runs code in here
+      //push and pop is the coding way to do copy and paste
       push();
       translate(width/2,height/2);
       rotate(i + 30);
@@ -65,5 +84,16 @@ function draw() {
 
       }
     }
+  }else if(seasonType == "fall"){
+    for(var x = 0; x < leafAmount; x++){
+      image(leaf, leafLocationX[x], leafLocationY[x], leaf.width/4, leaf.height/4);
+
+      if(leafLocationY[x]< height - 20){
+        leafLocationY[x]++;
+        leafLocationX[x] = leafLocationX[x] + sin(radians(frameCount));
+      }
+
+    }
+
   }
 }

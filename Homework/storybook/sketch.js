@@ -17,6 +17,7 @@ function preload(){
   page3 = loadImage("assets/Page3.jpeg");
   page4 = loadImage("assets/Page4.jpeg");
 
+
 }
 
 

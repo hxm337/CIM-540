@@ -35,6 +35,9 @@ function draw() {
   triangle(15,180,90,170,90,195);
   line(15,beakY,90,180);
 
+
+
+
   //eyes
   fill(255);
   ellipse(100,148,20,30);
