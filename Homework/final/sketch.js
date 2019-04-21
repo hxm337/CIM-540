@@ -51,27 +51,47 @@ function setup() {
   next = createButton("Next");
   next.position(400,600);
   next.mousePressed(function(){
+    if(currentPage > 0){
+      soundArray[currentPage].stop();
+    }
     currentPage = currentPage + 1;
-    if(currentPage >= 16){
+    if(currentPage > 15){
       currentPage = 0;
     }
-  soundArray[currentPage].play();
+    if(currentPage > 0){
+      soundArray[currentPage].play();
+    }
+
 
   });
 
   back = createButton("Back");
   back.position(100,600);
   back.mousePressed(function(){
-    currentPage = currentPage - 1;
-    if(currentPage <= -1){
-      currentPage = 0;
-    }
+
+      if(currentPage > 0){
+        soundArray[currentPage].stop();
+      }
+      currentPage = currentPage - 1;
+      if(currentPage <= -1){
+        currentPage = 0;
+      }
+      if(currentPage > 0){
+        soundArray[currentPage].play();
+      }
   });
 }
 
 function draw() {
   // put drawing code here
-  image(artArray[currentPage],50,50,width/2,height/2);
+  console.log(currentPage);
+  background(255);
+    if(currentPage == 0){
+      text("page 0", 200,200);
+    }
 
+    if(currentPage > 0){
+      image(artArray[currentPage],50,50,width/2,height/2);
 
+    }
 }
