@@ -87,7 +87,15 @@ function draw() {
   console.log(currentPage);
   background(255);
     if(currentPage == 0){
-      text("page 0", 200,200);
+      textSize(15);
+      text("Explore the Lowe Art Museum's latest collection with this music-pairing experience", 70,80);
+      text("Use the 'next' and 'back' buttons to view the pieces and hear the musical pairing", 70, 100);
+      textSize(40);
+      text("The Face of Our Time", 140, 300);
+      textSize(25);
+      text("Russian Avant-garde Art from the Bekkerman Collection", 50,360);
+      textSize(15);
+      text("Music provided by: www.ben-sound.com and youtube creators studio free library", 70, 670);
     }
 
     if(currentPage > 0){
