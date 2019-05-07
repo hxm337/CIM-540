@@ -89,7 +89,7 @@ function draw() {
     if(currentPage == 0){
       textSize(15);
       text("Explore the Lowe Art Museum's latest collection with this music-pairing experience", 70,80);
-      text("Use the 'next' and 'back' buttons to view the pieces and hear the musical pairing", 70, 100);
+      text("Plug in your headphones and click the 'next' and 'back' buttons to see each piece and hear its musical pairing", 70, 100);
       textSize(40);
       text("The Face of Our Time", 140, 300);
       textSize(25);
