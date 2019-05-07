@@ -1,7 +1,6 @@
 
 var artArray = [];
 var soundArray = [];
-var textArray = [];
 var next;
 var back;
 
@@ -40,6 +39,7 @@ function preload() {
   soundArray[13] = loadSound("assets/City_Plaza.mp3");
   soundArray[14] = loadSound("assets/bensound-deepblue.mp3");
   soundArray[15] = loadSound("assets/Anxious.mp3");
+
 
 }
 
@@ -101,5 +101,37 @@ function draw() {
     if(currentPage > 0){
       image(artArray[currentPage],50,50,width/2,height/2);
 
+    }
+
+    if(currentPage == 1){
+      text("Masked Figures by the Banks of a Venetian Canal by Aleksandra Aleksandrovna Exster", 50,700);
+    }if(currentPage == 2){
+      text("Twosome by the Fence by David Burlyuk", 50,700);
+    }if(currentPage == 3){
+      text("Landscape by Valdimir Burlyuk", 50,700);
+    }if(currentPage == 4){
+      text("Shore of Life by David Burlyuk", 50,700);
+    }if(currentPage == 5){
+      text("Still Life by David Shterenberg", 50,700);
+    }if(currentPage == 6){
+      text("Abstract Composition with Palette by Natalia Goncharova", 50,700);
+    }if(currentPage == 7){
+      text("La Bete Humaine by Marie Vassileiff", 50,700);
+    }if(currentPage == 8){
+      text("Woman in a Hat by Vladimir Baranoff-Rossine", 50,700);
+    }if(currentPage == 9){
+      text("No artist, no title", 50,700);
+    }if(currentPage == 10){
+      text("Suprematist Composition and Collage by Vasilij Ermilov", 50,700);
+    }if(currentPage == 11){
+      text("Cubist Composition by David Kakabadze", 50,700);
+    }if(currentPage == 12){
+      text("Capri by Boris Anisfel'd", 50,700);
+    }if(currentPage == 13){
+      text("By the Sea by Aleksandra Aleksandrovna Exster", 50,700);
+    }if(currentPage == 14){
+      text("Abstraction in Blue by Oleksandr Bohomazov", 50,700);
+    }if(currentPage == 15){
+      text("Annunciation by Pavel Tchelitchew", 50,700);
     }
 }
