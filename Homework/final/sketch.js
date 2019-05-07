@@ -4,7 +4,7 @@ var soundArray = [];
 var next;
 var back;
 
-var currentPage = 0;
+var currentPage = 0; 
 
 function preload() {
   artArray[1] = loadImage("assets/venice.jpeg");
